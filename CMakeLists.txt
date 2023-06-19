@@ -49,11 +49,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Drivers/CMSIS/Include Drivers/STM32F4xx_HAL_Driver/Inc Core/Inc Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/STM32F4xx_HAL_Driver/Inc/Legacy)
+include_directories(Drivers/CMSIS/Include Drivers/STM32F4xx_HAL_Driver/Inc Core/Inc Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include)
 
-add_definitions(-DUSE_HAL_DRIVER -DSTM32F446xx -DDEBUG)
+add_definitions(-DUSE_HAL_DRIVER -DSTM32F446xx -DDEBUG -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*" "Core/*.*" "Drivers/*.*" "Core/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F446RETX_FLASH.ld)
 
