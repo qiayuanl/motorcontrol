@@ -59,7 +59,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
+void can_tx_rx(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
